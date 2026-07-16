@@ -1,0 +1,35 @@
+# Flutter/Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+coverage/
+
+# Generated platform artifacts
+android/.cxx/
+android/.gradle/
+android/app/build/
+android/captures/
+android/local.properties
+ios/.symlinks/
+ios/Pods/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/Flutter/ephemeral/
+ios/Flutter/flutter_export_environment.sh
+macos/Pods/
+macos/Flutter/ephemeral/
+windows/flutter/ephemeral/
+linux/flutter/ephemeral/
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+*.xcuserstate
+xcuserdata/
+
+# macOS
+.DS_Store
