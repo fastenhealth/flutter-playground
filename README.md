@@ -31,3 +31,18 @@ and logs event bus messages with:
 ```text
 [FastenStitchElement onEventBus] message ...
 ```
+
+### Running on IOS
+
+```bash
+$ flutter devices
+$ flutter emulators
+
+Found 3 connected devices:
+  iPhone 17 (mobile) • F8740797-17FA-4394-87D3-DDF6A82D8105 • ios            • com.apple.CoreSimulator.SimRuntime.iOS-26-5
+  (simulator)
+  macOS (desktop)    • macos                                • darwin-arm64   • macOS 26.4.1 25E253 darwin-arm64
+
+# Run on the iPhone 17 simulator
+$ flutter run -d F8740797-17FA-4394-87D3-DDF6A82D8105
+```
