@@ -3,12 +3,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-//Prod Live
 const customerPublicId =
-    'public_live_2rzrytsspr29g36o7fgbyo7k28ds4uyqbot3h0k80p0bm';
-
-//Prod test
-// const customerPublicId = 'public_test_6f5j7qj54rlyajv6u8r36z0iu5v9qjf87f77tzl3k6ezu';
+    'public_test_6f5j7qj54rlyajv6u8r36z0iu5v9qjf87f77tzl3k6ezu';
 
 const tefcaMode = true;
 
