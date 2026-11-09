@@ -8,6 +8,14 @@ const customerPublicId =
 
 const tefcaMode = true;
 
+const brandingTheme = String.fromEnvironment(
+  'BRANDING_THEME',
+  defaultValue: 'light',
+);
+const brandingAccentColor = String.fromEnvironment('BRANDING_ACCENT_COLOR');
+const brandingLogoUrl = String.fromEnvironment('BRANDING_LOGO_URL');
+const brandingCompanyName = String.fromEnvironment('BRANDING_COMPANY_NAME');
+
 void main() {
   runApp(const FastenPlaygroundApp());
 }
@@ -134,6 +142,10 @@ class _FastenPlaygroundScreenState extends State<FastenPlaygroundScreen> {
                     child: FastenStitchElement(
                       key: ValueKey(_reloadCount),
                       publicId: customerPublicId,
+                      brandingTheme: brandingTheme,
+                      brandingAccentColor: brandingAccentColor,
+                      brandingLogoUrl: brandingLogoUrl,
+                      brandingCompanyName: brandingCompanyName,
                       tefcaMode: tefcaMode,
                       // tefcaCspPromptForce: true,
                       debugModeEnabled: true,
