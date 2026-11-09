@@ -32,6 +32,37 @@ and logs event bus messages with:
 [FastenStitchElement onEventBus] message ...
 ```
 
+## Co-branding
+
+Pass branding settings when starting the playground:
+
+```bash
+flutter run \
+  --dart-define=BRANDING_THEME=dark \
+  --dart-define='BRANDING_ACCENT_COLOR=#1A73E8' \
+  --dart-define='BRANDING_LOGO_URL=https://example.com/logo.png' \
+  --dart-define='BRANDING_COMPANY_NAME=Example Health'
+```
+
+| Playground setting | SDK option | Embed query parameter | Default |
+| --- | --- | --- | --- |
+| `BRANDING_THEME` | `brandingTheme` | `theme` | `light` |
+| `BRANDING_ACCENT_COLOR` | `brandingAccentColor` | `accent-color` | Omitted |
+| `BRANDING_LOGO_URL` | `brandingLogoUrl` | `logo-url` | Omitted |
+| `BRANDING_COMPANY_NAME` | `brandingCompanyName` | `company-name` | Omitted |
+
+Supply raw values; the SDK uses Dart's query-string encoder to escape `#`
+and reserved characters in logo URLs. Empty optional values are omitted.
+The embed accepts `light` or `dark` for the theme and falls back to `light`
+for missing or unrecognized values. It expands `#RGB` accent colors to
+`#RRGGBB` and ignores invalid colors. Logo URLs and company names are trimmed
+by the embed; logo URLs receive no other validation. The company name appears
+in the header and supplies the logo's alt text.
+
+Branding is passed through the WebView URL independently of `sdk-mode` and
+the native event bridge. Restart the app after changing these compile-time
+settings.
+
 ### Running on IOS
 
 ```bash
